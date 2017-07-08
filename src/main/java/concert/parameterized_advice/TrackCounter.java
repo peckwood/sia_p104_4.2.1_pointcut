@@ -19,7 +19,7 @@ public class TrackCounter {
 	@After("trackPlayed(trackNumber)")
 	public void countTrack(int trackNumber){
 		int currentCount = getPlayCount(trackNumber);
-		trackCounts.put(trackNumber, currentCount+1);
+		trackCounts.put(trackNumber, ++currentCount);
 		System.out.println("[TrackCounter] track "+trackNumber+" played "+currentCount+" times");
 	}
 	
